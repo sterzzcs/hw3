@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(233,198,148,1) 100%);
+}
+
+section.gallery {
+    position: relative;
+    padding: 45px;
+}
+
+h1.title{
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 45px;
+    position: relative;
+    color: rgb(15, 15, 15);
+}
+
+h2.title:after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #111111;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gallery-list{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.gallery-item {
+    display: block;
+    flex: 25%;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.8);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.gallery-item:hover .gallery-item-hover {
+    opacity: 1;
+}
+
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+}
+
